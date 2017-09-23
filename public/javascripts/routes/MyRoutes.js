@@ -7,6 +7,7 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
 import TestRedux from '../container/testRedux/TestRedux'
 import About from '../about.js';
+import HomeContainer from '../container/HomeContainer.js'
 
 
 export class MyRoutes extends Component{
@@ -14,7 +15,7 @@ export class MyRoutes extends Component{
     render(){
         return(
             <Router history={this.props.history}>
-                <Route path="/" component={About} />
+                <Route path="/" component={HomeContainer} />
                 <Route path="/test" component={TestRedux} />
                 <Route path="/about" component={About} />
             </Router>
