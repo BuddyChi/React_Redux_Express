@@ -39,6 +39,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.optimize.UglifyJsPlugin(),
         new webpack.BannerPlugin('版权所有，翻版必究'),
         new HtmlWebpackPlugin({
             template:__dirname + '/public/index.tmpl.html'
